@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: rgb(17, 40, 71);
+}
+
+form{
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 40em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid wheat;
+    background-color: white;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    border-radius: 1em;
+    width: 35em;
+    height: 35em;
+    /* margin-top: 6em; */
+}
+.login{
+   padding-top: 6em;
+}
+input{
+    width: 25em;
+    height: 3em;
+    margin-bottom: 0.5em;
+    border: 1px solid grey;
+    border-radius: 0.5em;
+    /* padding: 1em; */
+    font-size: 1em;
+    /* padding-left: 1em;
+   */
+    
+}
+
+.text{
+    padding-left: 1em;
+    text-align: center;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 5em;
+    /* margin-left: 20em; */
+
+    
+}
+
+
+button{
+    width: 30em;
+    height: 4em;
+    background-color: rgb(17, 40, 71);
+    border: none;
+    border-radius: 0.5em;
+  color: white;
+}
+ 
+@media screen and (max-width: 880px) {
+  
+    form{
+        margin-left: 5em;
+        padding-left: 2em;
+        padding-right: 2em;
+        width: 25em;
+    }
+    h1{
+        margin-top: 3em;
+    }
+
+    input{
+       
+        width: 15em;
+        height: 3em;
+        margin-left: 2em;
+    }
+    button{
+        width: 18em;
+        height: 4em;
+        background-color: rgb(17, 40, 71);
+        color: white;
+        margin-left: 2em;
+    }
+    
+  } 
+
+
