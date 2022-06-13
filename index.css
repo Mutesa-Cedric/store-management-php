@@ -19,6 +19,7 @@ form{
     position: relative;
     display: inline-flex;
     flex-direction: column;
+    justify-content: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 2px solid wheat;
     background-color: white;
@@ -31,6 +32,7 @@ form{
     height: 35em;
     margin-top: 3em;
 }
+
 .login{
    padding-top: 6em;
 }
@@ -78,13 +80,14 @@ h1{
 }
 
 
-button{
-    width: 30em;
-    height: 4em;
+#submit{
+    width:25em;
+    height: 3em;
     background-color: rgb(17, 40, 71);
     border: none;
     border-radius: 0.5em;
   color: white;
+  cursor: pointer;
 }
  
 /* @media screen and (max-width: 880px) {
