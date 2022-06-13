@@ -13,22 +13,20 @@
 <body>
     <h1>Create account as Admin</h1>
     <form action='register_admin.php' method='POST' >
-        <input  class='text'type="text"  name="firstname" placeholder="firstName" value="" required/>
-       <input   class='text' type="text"  name="lastname" placeholder="lastName" value="" required/>
-       <input   class='text' type="text"  name="telephone" placeholder="telephone" value="" required/>
-    
-       <input  class='text' type="text"  name="Gender" value="" placeholder="gender" required/>
+        <input  class='text'type="text"  name="firstname" placeholder="firstName" required/>
+       <input   class='text' type="text"  name="lastname" placeholder="lastName" required/>
+       <input   class='text' type="text"  name="telephone" placeholder="telephone" required/>
+       <input  class='text' type="text"  name="gender" placeholder="gender" required/>
+       <input   class='text' type="text"  name="nation" placeholder="nationarity" required/>
    
-       <input   class='text' type="text"  name="nationality" value="" placeholder="nationarity" required/>
+       <input   class='text' type="text"  name="username" placeholder="username" required/>
    
-       <input   class='text' type="text"  name="username" placeholder="username" value="" required/>
-   
-       <input   class='text'type="text"  name="emial" placeholder="emial" value="" required/>
+       <input   class='text'type="email"  name="email" placeholder="email" required/>
  
-       <input   class='text'type="text"  name="password" placeholder="password" value="" required/>
+       <input   class='text'type="password"  name="password" placeholder="password" required/>
        <input type="file" name="fileToUpload" id="fileToUpload">
        <div id="choose-profile">choose profile</div>
-    <button   class='text' name="submit" type="button">Register</button>
+    <input id="submit"   class='text' name="submit" type="submit" value="Register">
     
     </form>
 
