@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <style>
-table{
-  margin:2em auto;
-}
-      table,tr,td,th{
-        border:2px solid black;
-        color:rgb(17, 40, 71);
-        border-collapse:collapse;
-        font-size:24px;
-        padding:2px;
+  <style>
 
-      }
-      th{
-      background-color:rgba(0,0,200,0.7);
-      color:white;
-      font-weight:lighter;
-      font-size:24px;
-      }
+    body{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(17, 40, 71);
+      display: flex;
+      /* justify-content: center; */
+      align-items: center;
+      flex-direction: column;
+      color:black;
+    }
+    table {
+      border-radius: 20px;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
 
-      td{
-        color:rgb(17, 40, 71);
-      }
-    </style>
+    table,
+    tr,
+    th {
+      background-color:gray;
+      /* color: #ffffff; */
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 12px 15px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+  </style>
 </head>
+
 <body>
   <?php
-//   echo "this is readUser page";
-include_once 'connection.php';
+  //   echo "this is readUser page";
+  include_once 'connection.php';
 
-$select=mysqli_query($connection, "SELECT * FROM users");
+  $select = mysqli_query($connection, "SELECT * FROM users");
 
 
-echo "<table>
+  echo "<table>
 <tr>
 <th>Id</th>
 <th>firstname</th>
@@ -53,21 +79,22 @@ echo "<table>
 </tr>
 ";
 
-while($row=mysqli_fetch_assoc($select)){
+  while ($row = mysqli_fetch_assoc($select)) {
     echo "<tr>";
-    echo "<td>".$row['user_id']."</td>";
-    echo "<td>".$row['firstName']."</td>";
-    echo "<td>".$row['lastName']."</td>";
-    echo "<td>".$row['email']."</td>";
-    echo "<td>".$row['gender']."</td>";
-    echo "<td>".$row['telephone']."</td>";
-    echo "<td>".$row['nationality']."</td>";
-    echo "<td>".$row['username']."</td>";
-    echo "<td><a href=useredit.php?user_id=".$row['user_id'].">update</a> </td>";
-    echo "<td><a href=userdelete.php?user_id=".$row['user_id'].">delete</a> </td>";
+    echo "<td>" . $row['userId'] . "</td>";
+    echo "<td>" . $row['firstName'] . "</td>";
+    echo "<td>" . $row['lastName'] . "</td>";
+    echo "<td>" . $row['email'] . "</td>";
+    echo "<td>" . $row['gender'] . "</td>";
+    echo "<td>" . $row['telephone'] . "</td>";
+    echo "<td>" . $row['nationality'] . "</td>";
+    echo "<td>" . $row['username'] . "</td>";
+    echo "<td><a href=useredit.php?user_id=" . $row['userId'] . ">update</a> </td>";
+    echo "<td><a href=userdelete.php?user_id=" . $row['userId'] . ">delete</a> </td>";
     echo "</tr>";
-}
-echo "</table>"
-?>
+  }
+  echo "</table>"
+  ?>
 </body>
+
 </html>
